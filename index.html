@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>forma® — Sản phẩm nổi bật</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="#">forma<sup>®</sup></a>
+  <nav class="nav">
+    <a href="#">Sản phẩm</a>
+    <a href="#">Về chúng tôi</a>
+    <a href="#">Liên hệ</a>
+  </nav>
+  <a class="cart" href="#">Giỏ hàng <span id="count">0</span></a>
+</header>
+
+<main class="main">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Giới thiệu</div>
+      <h1>Gọn gàng hơn.<br>Cảm hứng hơn.</h1>
+      <p>Những món đồ được chọn cho góc làm việc của bạn.</p>
+    </div>
+    <div class="hero-side">
+      <strong>01 — 06</strong>
+      <div>Thiết kế tinh giản.<br>Trải nghiệm trọn vẹn.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Sản phẩm nổi bật</h2>
+      <span>06 sản phẩm được tuyển chọn</span>
+    </div>
+
+    <div class="products">
+      <article class="card">
+        <div class="thumb c1"><img src="img/headphones.png" alt="Tai nghe không dây"><span class="tag">ĐƯỢC YÊU THÍCH</span><span class="num">03</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Tai nghe không dây</h3>
+          <p>Chống ồn chủ động, tập trung trọn vẹn.</p>
+          <div class="buy"><span class="price">1.890.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb c2"><img src="img/keyboard.png" alt="Bàn phím cơ"><span class="num">01</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Bàn phím cơ</h3>
+          <p>Gõ êm, thiết kế tối giản cho góc làm việc.</p>
+          <div class="buy"><span class="price">1.290.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb c3"><img src="img/speakers.png" alt="Loa Bluetooth"><span class="num">02</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Loa Bluetooth</h3>
+          <p>Âm thanh đầy đặn trong thiết kế nhỏ gọn.</p>
+          <div class="buy"><span class="price">890.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb c4"><img src="img/watch.png" alt="Đồng hồ thông minh"><span class="num">04</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Đồng hồ thông minh</h3>
+          <p>Theo dõi vận động và nhịp sống mỗi ngày.</p>
+          <div class="buy"><span class="price">2.490.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb c5"><img src="img/mouse.png" alt="Chuột không dây"><span class="num">05</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Chuột không dây</h3>
+          <p>Cầm nắm thoải mái, kết nối linh hoạt.</p>
+          <div class="buy"><span class="price">490.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb c6"><img src="img/camera.png" alt="Máy ảnh mini"><span class="num">06</span></div>
+        <div class="info">
+          <div class="cat">THIẾT BỊ &amp; PHỤ KIỆN</div>
+          <h3>Máy ảnh mini</h3>
+          <p>Lưu lại những khoảnh khắc đáng nhớ.</p>
+          <div class="buy"><span class="price">3.290.000 ₫</span><button class="btn">Mua ngay ↗</button></div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>forma® — Không gian tốt, ý tưởng hay.</span>
+  <span>2026</span>
+</footer>
+
+<script>
+  // Bấm "Mua ngay" để tăng số lượng giỏ hàng
+  const count = document.getElementById('count');
+  document.querySelectorAll('.btn').forEach(b =>
+    b.addEventListener('click', () => count.textContent = +count.textContent + 1)
+  );
+</script>
+</body>
+</html>

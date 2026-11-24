@@ -1,0 +1,207 @@
+:root {
+  --bg: #f7f6f0;
+  --ink: #1f3a30;
+  --muted: #6b7a73;
+  --line: #dcdcd2;
+  --card: #ffffff;
+  --chip: #eeede4;
+  --gap: 26px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Be Vietnam Pro", "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/*Header*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 22px;
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+.logo sup { font-size: 13px; font-weight: 600; margin-left: 2px; }
+.nav { display: flex; gap: 34px; font-size: 15px; }
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 15px;
+}
+.cart span { color: #d6f08a; }
+
+/* ---------- Main ---------- */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 22px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 56px 0 44px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+}
+.hero p { margin-top: 14px; color: var(--muted); font-size: 18px; }
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 26px;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.hero-side strong { color: var(--ink); font-size: 15px; }
+
+/* Section title */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 22px;
+}
+.section-head h2 { font-size: 24px; letter-spacing: -0.5px; }
+.section-head span { font-size: 13px; color: var(--muted); }
+
+/*Product list*/
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding-bottom: 36px;
+}
+.card {
+  flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.thumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 168px;
+  font-size: 64px;
+}
+.thumb .tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  background: #fff;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.thumb .num {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.c1 { background: #dfe6da; }
+.c2 { background: #e6e6df; }
+.c3 { background: #efe4d8; }
+.c4 { background: #e5e8ec; }
+.c5 { background: #eee4de; }
+.c6 { background: #e1e3dc; }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  flex: 1;
+}
+.cat { font-size: 10px; letter-spacing: 1.5px; color: var(--muted); font-weight: 700; }
+.info h3 { font-size: 19px; }
+.info p { font-size: 13px; color: var(--muted); flex: 1; }
+.buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+.price { font-size: 17px; font-weight: 700; }
+.btn {
+  padding: 10px 14px;
+  background: var(--chip);
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.btn:hover { background: #e2e1d6; }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/*Responsive*/
+@media (max-width: 900px) {
+  .card { flex-basis: calc((100% - var(--gap)) / 2); }
+  .nav { display: none; }
+}
+@media (max-width: 600px) {
+  .card { flex-basis: 100%; }
+  .hero { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .hero h1 { font-size: 40px; 
+  }
+}
+
+.thumb img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
