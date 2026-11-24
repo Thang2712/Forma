@@ -1,6 +1,6 @@
 # forma® – Product Showcase Page
 
-🔗 **Live demo:** https://thang2712.github.io/forma/
+🔗 **Live demo:** https://thang2712.github.io/Forma/
 
 A clean, minimalist product listing page for **forma®**, a fictional store
 selling desk and workspace accessories. Built with HTML, CSS and a small
